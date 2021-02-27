@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Completed{% endblock %}
+{% block content %}
+    {% for task in tasks %}
+        <div class="in_a_row">
+            <p class="name">{{task.task}}</p>
+            <p>{{task.created}}</p>
+            <p>{{task.due_on}}</p>
+            <p>{{task.owner}}</p>
+            <button class="aero-button small-button">{{task.mark}}</button>
+        </div>
+    {% endfor %}
+{% endblock %}
+{% block type %} incomplete {% endblock %}
