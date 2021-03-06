@@ -1,0 +1,58 @@
+.in_a_row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header {
+    margin-bottom: 30px;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.blue-button {
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 8px;
+    border-color: dodgerblue;
+}
+
+.aero-button {
+    background-color: #0095B3;
+    color: white;
+    border-radius: 8px;
+    border-color: #0095B3;
+}
+
+.view-button {
+    background-color: #f4bb00;
+    color: black;
+    border-radius: 3px;
+    border-color: #f4bb00;
+}
+
+.delete-button {
+    background-color: #E52B50;
+    color: white;
+    border-radius: 3px;
+    border-color: #E52B50;
+}
+
+.big-button {
+    font-size: 16px;
+}
+
+.small-button {
+    height: 30px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.name {
+    color: dodgerblue;
+}
+
+.footer {
+    margin-left: 90px;
+}

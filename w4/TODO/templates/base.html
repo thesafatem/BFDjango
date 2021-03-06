@@ -1,0 +1,39 @@
+<!--{% load static %}-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %} ">
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <button class="blue-button big-button header">
+        Add task
+    </button>
+    <h2 style="margin-left: 100px">{% block list %}{% endblock %} in List {{list}}</h2>
+    <div class="in_a_row">
+        <div class="bold">Task</div>
+        <div class="bold">Created</div>
+        <div class="bold">Due on</div>
+        <div class="bold">Owner</div>
+        <div class="bold">Mark</div>
+    </div>
+    {% for task in tasks %}
+        <div class="in_a_row">
+            <p class="name">{{task.name}}</p>
+            <p>{{task.created}}</p>
+            <p>{{task.due_on}}</p>
+            <p>{{task.owner}}</p>
+            {% if task.mark %}
+            <button class="aero-button small-button">{{'Done'}}</button>
+            {% else %}
+            <button class="aero-button small-button">{{'Not Done'}}</button>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <div class="footer">
+        <button class="view-button">View {% block type %}{% endblock %} tasks</button>
+        <button class="delete-button">Delete this list</button>
+    </div>
+</body>
+</html>
